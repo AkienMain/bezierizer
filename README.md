@@ -10,4 +10,4 @@ Scaled Jaccard index (Maximum 100)
 # Links
 
 - https://akienmain.itch.io/bezierizer
-- https://studio.youtube.com/video/zwagduF2Wt0/edit
+- https://www.youtube.com/shorts/zwagduF2Wt0
