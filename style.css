@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+
+:root {
+    --title: #0074d9;
+    --anchor: #0074d9;
+    --handle: #0074d9;
+    --bezier: #0074d9;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1200px;
+    margin: 0;
+    background: #f0f0f0;
+}
+
+#editor {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 24px;
+}
+
+svg {
+    display: block;
+    margin: auto;
+    background: transparent;
+}
+
+.title {
+    font-family: "Moirai One", system-ui;
+    font-size: 96px;
+    color: var(--title);
+}
+
+.dot {
+    pointer-events: none;
+}
+
+.anchor {
+    cursor: pointer;
+    fill: #fff;
+    stroke: var(--anchor);
+    stroke-width: 6;
+}
+
+.anchor.active {
+    fill: var(--anchor);
+}
+
+.handle {
+    cursor: pointer;
+    fill: #fff;
+    stroke: var(--handle);
+    stroke-width: 4;
+}
+
+.handle.active {
+    fill: var(--handle);
+}
+
+.handle-line {
+    stroke: var(--handle);
+    stroke-width: 4;
+}
+
+.bezier {
+    fill: none;
+    stroke: var(--bezier);
+    stroke-width: 3;
+}
