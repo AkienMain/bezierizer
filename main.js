@@ -49,11 +49,6 @@ const canvas = document.getElementById('mosaicCanvas');
 canvas.setAttribute('width', canvasW);
 canvas.setAttribute('height', canvasH);
 
-
-let s0 = document.createElement('script');
-s0.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
-document.body.appendChild(s0);
-
 recalcPoints();
 redraw();
 
