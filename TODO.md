@@ -1,0 +1,10 @@
+- multi player
+  - multi player can play
+  - server has one-time password
+  - after url put one-time password as query
+  - modified information (besier curves points' position, handle's position) is sent by web socket?
+  - besier curve is changed real time.
+  - multi player modify besier curve in order.
+- restriction
+  - time
+  - how many time can be moved
