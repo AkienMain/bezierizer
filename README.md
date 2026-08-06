@@ -9,5 +9,6 @@ Scaled Jaccard index (Maximum 100)
 
 # Links
 
+- https://akienmain.github.io/bezierizer/
 - https://akienmain.itch.io/bezierizer
 - https://www.youtube.com/shorts/zwagduF2Wt0
