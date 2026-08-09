@@ -62,34 +62,39 @@ const modeSelectModal = new bootstrap.Modal(document.getElementById('modeSelectM
 modeSelectModal.show();
 
 const singleModeBtn = document.getElementById('singleModeBtn');
-singleModeBtn.onclick = function () {
-  currentMode = mode.single;
-  editor.style.display = '';
-  mpDiv.style.display = 'none';
-  modeSelectModal.hide();
+function handleModeBtn(e, modeType) {
+  e.preventDefault();
+  e.stopPropagation();
+  if (modeType === 'single') {
+    currentMode = mode.single;
+    editor.style.display = '';
+    mpDiv.style.display = 'none';
+    modeSelectModal.hide();
+    fetch(defaultBgImage)
+      .then(response => response.blob())
+      .then(blob => {
+        const reader = new FileReader();
+        reader.onload = function (ev) {
+          renderMosaic(ev.target.result);
+        };
+        reader.readAsDataURL(blob);
+      });
+  } else if (modeType === 'multi') {
+    currentMode = mode.multi;
+    editor.style.display = '';
+    importFigureBtn.style.display = 'none';
+    importBGBtn.style.display = 'none';
+    commonDiv.style.display = 'none';
+    modeSelectModal.hide();
+    if (typeof setupMultiplayerUI === 'function') setupMultiplayerUI();
+  }
+}
 
-  // Auto-import local image file on page load
-  fetch(defaultBgImage)
-    .then(response => response.blob())
-    .then(blob => {
-      const reader = new FileReader();
-      reader.onload = function (ev) {
-        renderMosaic(ev.target.result);
-      };
-      reader.readAsDataURL(blob);
-    });
-};
+singleModeBtn.addEventListener('click', e => handleModeBtn(e, 'single'));
+singleModeBtn.addEventListener('touchend', e => handleModeBtn(e, 'single'));
+multiModeBtn.addEventListener('click', e => handleModeBtn(e, 'multi'));
+multiModeBtn.addEventListener('touchend', e => handleModeBtn(e, 'multi'));
 
-const multiModeBtn = document.getElementById('multiModeBtn');
-multiModeBtn.onclick = function () {
-  currentMode = mode.multi;
-  editor.style.display = '';
-  importFigureBtn.style.display = 'none';
-  importBGBtn.style.display = 'none';
-  commonDiv.style.display = 'none';
-  modeSelectModal.hide();
-  if (typeof setupMultiplayerUI === 'function') setupMultiplayerUI();
-};
 
 const importBGBtn = document.getElementById('importBGBtn');
 importBGBtn.onclick = function () {
