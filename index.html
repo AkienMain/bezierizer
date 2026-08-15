@@ -80,21 +80,38 @@
         <input type="number" id="anchorCountInput" style="width:80px;" class="form-control">
       </div>
     </div>
-    <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;"></div>
-    <!-- Share Dialog -->
-    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="shareModalLabel">Share</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body d-flex justify-content-center gap-3">
-            <button id="shareXBtn" class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
-              style="width:48px;height:48px;" title="Share to X"><i class="bi bi-twitter-x"
-                style="font-size:1.5rem;"></i></button>
-            <!-- <button id="shareInstagramBtn" class="btn btn-danger rounded-circle d-flex align-items-center justify-content-center" style="width:48px;height:48px;" title="Share to Instagram"><i class="bi bi-instagram" style="font-size:1.5rem;"></i></button> -->
-          </div>
+    <!-- Bottom section -->
+    <div>
+      <hr style="margin:24px;">
+      <div class="d-flex align-items-center justify-content-center" style="margin:16px;gap:16px;">
+        <a href="https://github.com/AkienMain/bezierizer" target="_blank">
+          <button class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center"
+            style="width:36px;height:36px;" title="GitHub"><i class="bi bi-github"></i>
+          </button>
+        </a>
+        <a href="https://akienmain.github.io/web-site" target="_blank">
+          <button class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center"
+            style="width:36px;height:36px;" title="Web site"><i class="bi bi-globe"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Toast -->
+  <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;"></div>
+  <!-- Share Dialog -->
+  <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="shareModalLabel">Share</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center gap-3">
+          <button id="shareXBtn" class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+            style="width:48px;height:48px;" title="Share to X"><i class="bi bi-twitter-x"
+              style="font-size:1.5rem;"></i></button>
+          <!-- <button id="shareInstagramBtn" class="btn btn-danger rounded-circle d-flex align-items-center justify-content-center" style="width:48px;height:48px;" title="Share to Instagram"><i class="bi bi-instagram" style="font-size:1.5rem;"></i></button> -->
         </div>
       </div>
     </div>
